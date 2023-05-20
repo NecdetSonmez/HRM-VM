@@ -1,8 +1,17 @@
 #include "Instruction.hpp"
 
+#include <iostream>
+
 Instruction::Instruction()
 {
-    
+
+}
+
+void Instruction::operator=(Instruction& obj)
+{
+    this->setInstructionType(obj.getInstructionType());
+    this->setParameterType(obj.getParameterType());
+    this->setParameter(obj.getParameter());
 }
 
 std::string Instruction::getInstructionType()
@@ -32,7 +41,16 @@ void Instruction::setParameterType(ParameterType parameterType)
 
 void Instruction::setParameter(int parameter)
 {
-    m_parameter = parameter;
+    if(m_parameterType != ParameterType::None)
+        m_parameter = parameter;
+}
+
+void Instruction::print()
+{
+    if(m_parameterType != ParameterType::None)
+        std::cout << m_instructionType << " " << m_parameter << "\n";
+    else
+        std::cout << m_instructionType << "\n";
 }
 
 

@@ -7,6 +7,7 @@ int main()
     testCore.readFile("input.hrm");
     testCore.printInstructions();
     testCore.printInbox();
+    testCore.process();
 
     return 0;
 }
