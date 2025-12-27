@@ -1,11 +1,10 @@
-#ifndef CORE_HPP
-#define CORE_HPP
+#pragma once
 
 #include <fstream>
 #include <vector>
 #include <ctype.h>
 #include <iostream>
-#include "Instruction.hpp"
+#include "core/instruction.hpp"
 
 static const std::string instructionsList[] = {
 	"INBOX",
@@ -38,6 +37,3 @@ private:
     std::vector<Instruction> m_instructions;
 	std::vector<int> m_inbox;
 };
-
-#endif // !CORE_HPP
-

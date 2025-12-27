@@ -1,5 +1,4 @@
-#ifndef INSTRUCTION_HPP
-#define INSTRUCTION_HPP
+#pragma once
 
 #include <string>
 
@@ -31,5 +30,3 @@ private:
     ParameterType m_parameterType = ParameterType::None;
     int m_parameter;
 };
-
-#endif
