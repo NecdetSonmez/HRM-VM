@@ -4,7 +4,7 @@
 int main()
 {
     Core testCore(16);
-    testCore.readFile("input.hrm");
+    testCore.readFile("../examples/input.hrm");
     testCore.printInstructions();
     testCore.printInbox();
     testCore.process();
